@@ -1,0 +1,426 @@
+Ans 1:
+import numpy as np
+
+identity_matrix = np.eye(3, dtype=float)
+print(identity_matrix)
+
+Ans 2:
+import numpy as np
+
+array = np.random.rand(10)
+print(array)
+
+Ans 3:
+import numpy as np
+array = np.random.randint(0, 100, size=(5,3))  
+
+print(array)
+
+Ans 4:
+import numpy as np   
+array = np.random.randint(10,50, size=(4,5))
+print(array)
+
+Ans 5:
+import numpy as np
+array_1d = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+print(array_1d)
+array_2d = array_1d.reshape(3,4)
+print(array_2d)
+
+Ans 6:
+import numpy as np
+array_ones = np.ones((3, 3))
+print(array_ones)
+
+Ans 7:
+import numpy as np
+a = np.array([1, 2, 3, 2, 3, 4, 3, 4, 5, 6])
+b = np.array([7, 2, 10, 2, 7, 4, 9, 4, 9, 8])
+common= np.intersect1d(a, b)
+print("Common items:", common)
+
+Ans 8:
+import numpy as np
+a = np.array([1, 2, 3, 4, 5])
+b = np.array([5, 6, 7, 8, 9])
+n= np.setdiff1d(a, b)
+print("array:", n)
+
+Ans 9:
+import numpy as np
+a = np.arange(15)
+np.set_printoptions(threshold=6)
+print(a)
+
+Ans 10:
+import numpy as np
+a = np.array([1, 2, 3, np.nan, 5, 6, 7, np.nan])
+nonan = a[~np.isnan(a)]
+print("Array without NaN values:", nonan)
+
+Ans 11:
+import numpy as np
+array1d = np.arange(1, 21)
+print(array1d)
+array2d = array1d.reshape(4, 5)
+print(array2d)
+
+Ans 12:
+import numpy as np
+array3d = np.array([[[1, 2, 3, 4],
+                      [5, 6, 7, 8],
+                      [9, 10, 11, 12]],
+                     
+                     [[13, 14, 15, 16],
+                      [17, 18, 19, 20],
+                      [21, 22, 23, 24]]])
+
+print("Original array:",array3d)
+print("Shape:", array3d.shape)
+print("Size:", array3d.size)
+print("Number of dimensions:", array3d.ndim)
+print("Data type:", array3d.dtype)
+print("Change data type: ",array3d.astype(np.float64))
+
+Ans 13:
+import numpy as np
+array = np.arange(1, 13)
+print(array)
+array2d =array.reshape(3, 4)
+print(array2d)
+flattenedarray = array2d.ravel()
+print(flattenedarray)
+
+Ans 14:
+import numpy as np
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+addition = a + b
+subtraction = a - b
+multiplication = a * b
+division = a / b
+c = np.array([1, 0, 3])
+division_with_zero = a / c
+print("addition: ",addition)
+print("subtraction: ",subtraction)
+print("multiplication: ",multiplication)
+print("division: ",division)
+print("division with zero: ",division_with_zero)
+
+Ans 15:
+import numpy as np
+array2d = np.array([[1], [2], [3]])
+print(array2d)
+array1d = np.array([10, 20, 30])
+print(array1d)
+result= array2d + array1d
+print(result)
+
+Ans 16:
+import numpy as np
+array2d = np.random.randint(0, 11, size=(4, 5))
+print(array2d)
+mask = array2d > 5
+print(mask)
+array2d[mask] = 5
+print(array2d)
+
+Ans 17:
+import numpy as np
+array_4x4 = np.random.randint(0, 10, size=(4, 4))
+print(array_4x4)
+second_row = array_4x4[1, :]
+print(second_row)
+last_column = array_4x4[:, -1]
+print(last_column)
+subarray = array_4x4[:2, :2]
+print(subarray)
+
+Ans 18:
+1. Exploratory Data Analysis (EDA)
+Practical Example:
+During EDA, you often need to compute summary statistics of a dataset, such as mean, median, standard deviation, and more. NumPy can efficiently perform these calculations.
+
+NumPy Solution:
+
+python
+Copy code
+import numpy as np
+
+# Example data: heights of individuals in centimeters
+heights = np.array([165, 170, 175, 180, 185, 190, 195])
+
+# Compute summary statistics
+mean_height = np.mean(heights)
+median_height = np.median(heights)
+std_dev_height = np.std(heights)
+
+print("Mean Height:", mean_height)
+print("Median Height:", median_height)
+print("Standard Deviation of Height:", std_dev_height)
+
+2. Artificial Intelligence (AI)
+Practical Example:
+In AI, preprocessing and feature scaling of data are crucial for better model performance. NumPy can normalize data to bring all features to a common scale.
+
+NumPy Solution:
+
+python
+Copy code
+import numpy as np
+
+# Example data: features of different samples
+data = np.array([[1, 2, 3],
+                  [4, 5, 6],
+                  [7, 8, 9]])
+
+# Normalize data (min-max scaling)
+min_values = np.min(data, axis=0)
+max_values = np.max(data, axis=0)
+normalized_data = (data - min_values) / (max_values - min_values)
+
+print("Normalized Data:")
+print(normalized_data)
+
+3. Machine Learning (ML)
+Practical Example:
+In ML, you often need to split a dataset into training and testing sets. NumPy can help with this by randomly shuffling the dataset and splitting it.
+
+NumPy Solution:
+
+python
+Copy code
+import numpy as np
+
+# Example data: dataset with 10 samples and 2 features
+dataset = np.array([[1, 2],
+                    [3, 4],
+                    [5, 6],
+                    [7, 8],
+                    [9, 10],
+                    [11, 12],
+                    [13, 14],
+                    [15, 16],
+                    [17, 18],
+                    [19, 20]])
+
+# Shuffle the dataset
+np.random.shuffle(dataset)
+
+# Split the dataset into 70% training and 30% testing
+train_size = int(0.7 * len(dataset))
+train_set = dataset[:train_size]
+test_set = dataset[train_size:]
+
+print("Training Set:")
+print(train_set)
+
+print("\nTesting Set:")
+print(test_set)
+
+4. Deep Learning (DL)
+Practical Example:
+In DL, data often needs to be reshaped or manipulated to fit the model’s input requirements. NumPy can reshape arrays to prepare data for deep learning models.
+
+NumPy Solution:
+
+python
+Copy code
+import numpy as np
+
+# Example data: 1D array of 12 elements
+data = np.arange(12)
+
+# Reshape the data to a 4x3 matrix (suitable for a simple neural network layer input)
+reshaped_data = data.reshape((4, 3))
+
+print("Reshaped Data (4x3 matrix):")
+print(reshaped_data)
+
+Ans 19:
+import numpy as np
+
+# Create a random 4x4 matrix
+matrix = np.random.rand(4, 4)
+
+# Compute eigenvalues and eigenvectors
+eigenvalues, eigenvectors = np.linalg.eig(matrix)
+
+# Reconstruct the matrix using the eigenvalues and eigenvectors
+# Reconstructed matrix = eigenvectors * diagonal matrix of eigenvalues * inverse(eigenvectors)
+diagonal_matrix = np.diag(eigenvalues)
+reconstructed_matrix = eigenvectors @ diagonal_matrix @ np.linalg.inv(eigenvectors)
+
+print("Original Matrix:")
+print(matrix)
+
+print("\nEigenvalues:")
+print(eigenvalues)
+
+print("\nEigenvectors:")
+print(eigenvectors)
+
+print("\nReconstructed Matrix:")
+print(reconstructed_matrix)
+
+# Check if the reconstruction is close to the original matrix
+print("\nReconstruction Error:")
+print(np.allclose(matrix, reconstructed_matrix))
+
+Ans 20:
+import numpy as np
+original_array = np.arange(1, 28)
+array_3d = original_array.reshape((3, 3, 3))
+print("Original 1D Array:")
+print(original_array)
+print("\nReshaped 3D Array (3x3x3):")
+print(array_3d)
+flattened_array = array_3d.flatten()
+print("\nFlattened 1D Array:")
+print(flattened_array)
+print("\nComparison Result:")
+print(np.array_equal(original_array, flattened_array))
+
+Ans 21:
+import numpy as np
+import time
+size = 1000
+matrix_a = np.random.rand(size, size)
+matrix_b = np.random.rand(size, size)
+start_time = time.time()
+result_dot = np.dot(matrix_a, matrix_b)
+time_dot = time.time() - start_time
+start_time = time.time()
+result_at = matrix_a @ matrix_b
+time_at = time.time() - start_time
+results_are_equal = np.allclose(result_dot, result_at)
+print("Results are identical:", results_are_equal)
+print("Time taken using np.dot():", time_dot, "seconds")
+print("Time taken using @ operator:", time_at, "seconds")
+
+Ans 22:
+import numpy as np
+array_3d = np.array([[[1, 2, 3, 4]],
+                     [[5, 6, 7, 8]]])
+array_2d = np.array([[10],
+                     [20],
+                     [30],
+                     [40]])
+
+print("3D Array (shape (2, 1, 4)):")
+print(array_3d)
+
+print("\n2D Array (shape (4, 1)):")
+print(array_2d)
+result_broadcast = array_3d + array_2d.T
+
+print("\nResult with Broadcasting:")
+print(result_broadcast)
+array_2d_expanded = array_2d[np.newaxis, :, :]
+result_newaxis = array_3d + array_2d_expanded
+
+print("\nResult using np.newaxis:")
+print(result_newaxis)
+print("\nResults are identical:", np.allclose(result_broadcast, result_newaxis))
+
+Ans 23:
+import numpy as np
+array_2d = np.random.rand(4, 5) 
+
+print("Original 2D Array:")
+print(array_2d)
+mask = array_2d < 0.5
+
+print("\nBoolean Mask (values < 0.5):")
+print(mask)
+
+array_2d[mask] = array_2d[mask] ** 2
+
+print("\nModified 2D Array (values < 0.5 replaced with their squares):")
+print(array_2d)
+
+Ans 24:
+import numpy as np
+array = np.arange(1, 26).reshape((5, 5))
+
+print("Original 5x5 Array:",array)
+diagonal_elements = np.diagonal(array)
+
+print("\nDiagonal Elements:",diagonal_elements)
+
+array[2, :] = 0
+
+print("\nArray with Middle Row Replaced by Zeros:",array)
+
+flipped_array = np.flipud(np.fliplr(array))
+
+print("\nArray Flipped Vertically and Horizontally:",flipped_array)
+
+Ans 25:
+import numpy as np
+array_4d = np.random.randint(0, 10, size=(2, 3, 4, 5))
+
+print("Original 4D Array (shape (2, 3, 4, 5)):",array_4d)
+subarray = array_4d[0, :, -2:, :]
+
+print("\nExtracted Subarray (shape (3, 2, 5)):",subarray)
+mean_along_axis1 = np.mean(subarray, axis=1)
+
+print("\nMean along axis 1 of the Subarray (shape (3, 5)):",mean_along_axis1)
+
+Ans 26:
+import numpy as np
+original_array = np.arange(200).reshape((10, 20))
+
+print("Original Array Shape:", original_array.shape)
+print("Original Array Size:", original_array.size)
+
+# Reshape to (20, 10)
+reshaped_20_10 = original_array.reshape((20, 10))
+print("\nReshaped Array (20, 10) Shape:", reshaped_20_10.shape)
+print("Reshaped Array Size:", reshaped_20_10.size)
+
+# Reshape to (5, 40)
+reshaped_5_40 = original_array.reshape((5, 40))
+print("\nReshaped Array (5, 40) Shape:", reshaped_5_40.shape)
+print("Reshaped Array Size:", reshaped_5_40.size)
+
+Ans 27:
+import numpy as np
+large_array = np.arange(100).reshape((10, 10))
+
+print("Original 2D Array (shape (10, 10)):")
+print(large_array)
+
+reshaped_5_20 = large_array.reshape((5, 20))
+print("\nReshaped Array (5, 20):")
+print(reshaped_5_20)
+
+another_array = np.random.randint(1, 10, size=(20, 5))
+
+matrix_product = np.dot(reshaped_5_20, another_array)
+print("\nMatrix Product (shape (5, 5)):")
+print(matrix_product)
+
+flattened_array = reshaped_5_20.ravel()
+print("\nFlattened Array (shape (100,)):")
+print(flattened_array)
+
+restored_array = flattened_array.reshape((10, 10))
+print("\nRestored Array (shape (10, 10)):")
+print(restored_array)
+
+Ans 28:
+import numpy as np
+
+matrix = np.arange(1, 37).reshape((6, 6))
+
+print("Original 6x6 Matrix:",matrix)
+upper_triangular_matrix = matrix.copy()
+
+upper_triangular_matrix = np.triu(matrix)
+
+print("\nMatrix with Lower Triangular Part Set to Zero:",upper_triangular_matrix)
+
+

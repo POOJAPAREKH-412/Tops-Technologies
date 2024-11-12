@@ -1,0 +1,1222 @@
+Ans 1: 
+1. Database apps.
+2. Custom apps.
+3. Web-based apps.
+4. Low code apps.
+5. No code apps.
+6. Enterprise apps.
+
+Ans 2:
+Programming to plan for something to happen at a particular time, to make somebody/something work or act automatically in a particular way.
+
+Ans 3:
+Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components together. Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules and packages, which encourages program modularity and code reuse. The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely distributed.
+Ans 4:
+a=int(input("enter number: "))
+if a>=1:
+    print("A is positive number")
+elif a<= -1:
+    print("A is negative number")
+else:
+    print("A is zero")
+
+Ans 5:
+a=int(input("enter number: "))
+n=1
+for i in range(1,a+1):
+    n*=i
+print("factorial of number is: ",n)
+
+Ans 6:
+a,b=0,1
+n=int(input("Enter N: "))
+print(a,end=" ")
+while b<n:
+    print(b,end=" ")
+    a,b=b,a+b
+
+Ans 7:
+You can classify memory management in Python in one of two ways: dynamic allocation or static allocation. Dynamic allocation occurs as the program is running. This means that as the program operates, it can dynamically determine where to allocate memory while reusing and releasing it.
+
+Ans 8:
+The continue statement is used to skip the remaining code inside a loop for the current iteration only. For instance, let's use continue instead of a break statement in the previous example. When the condition num == 5 becomes True , the continue statement gets executed.
+
+Ans 9:
+def swap_with_temp(a,b):
+    print(f"before swap: a={a} , b={b}")
+    temp=a
+    a=b
+    b=temp
+    print(f"after swap: a={a}, b={b}")
+    return a,b
+
+a,b=10,11
+a,b=swap_with_temp(a,b)
+
+def swap_without_temp(a,b):
+    print(f"before swap: a={a} , b={b}")
+    a=a+b
+    b=a-b
+    a=a-b
+    print(f"after swap: a={a}, b={b}")
+    return a,b
+
+a,b=10,11
+a,b=swap_without_temp(a,b)
+
+Ans 10:
+n=int(input("Enter number: "))
+if n%2==0:
+    print("This is even number: ")
+else:
+    print("This is odd number: ")
+
+Ans 11:
+
+letter = input("Enter a letter: ")
+if letter in ['a','e','i','o','u']:
+    print(letter," is a vowel letter")
+else:
+    print(letter," is not vowel")
+
+Ans 12:
+a=int(input("Enter number: "))
+b=int(input("Enter number: "))
+c=int(input("Enter number: "))
+
+if a==b or a==c or b==c:
+    print("sum of two value is zero")
+else:
+    print("sum of three numbers",a+b+c)
+    
+Ans 13:
+a=int(input("Enter number: "))
+b=int(input("Enter number: "))
+
+if a==b:
+    print("True")
+elif (a+b)==5 or (a-b)==5:
+    print("True")
+else:
+    print("False")
+    
+Ans 14:
+n=int(input("Enter number: "))
+if n>0:
+    print("This is positive integer")
+else:
+    print("this is not positive integer")
+    
+Ans 15:
+a="Tops Technologies"
+print(len(a))
+
+Ans 16:
+a="Tops Technologies"
+print(a.count("T"))
+
+Ans 17:
+Negative indexes are a feature in some programming languages, like Python, that allow you to access elements of a sequence (like a list, tuple, or string) starting from the end of the sequence rather than the beginning.
+Why Negative Indexes Are Used:
+1. Convenience: They provide an easy way to access elements from the end of a sequence without needing to know the length of the sequence.
+2. Readability: They can make code easier to read and understand, particularly when the intention is to access elements near the end of a sequence.
+3. Efficiency: Negative indexing avoids the need to manually calculate the positive index when accessing elements from the end, reducing the chance of errors.
+Negative indexes are particularly useful when you need to reference items relative to the end of a sequence, such as when you're interested in the last few elements.
+
+Ans 18:
+a="Tops Technologies, hello Tops"
+print(a.count("Tops"))
+
+Ans 19:
+def count_word_occurrences(sentence):
+    # Split the sentence into words
+    words = sentence.split()
+    
+    # Create a dictionary to store word counts
+    word_count = {}
+    
+    # Count occurrences of each word
+    for word in words:
+        word = word.lower()  # Convert to lower case to count words in a case-insensitive manner
+        if word in word_count:
+            word_count[word] += 1
+        else:
+            word_count[word] = 1
+    
+    # Display the counts
+    for word, count in word_count.items():
+        print(f"'{word}': {count}")
+
+# Example usage
+sentence = input("Enter a sentence: ")
+count_word_occurrences(sentence)
+
+Ans 20:
+a="Hello"
+b="World"
+print("Result=",a,b)
+
+Ans 21:
+a=input("Enter String: ")
+if len(a)<3:
+    print(a)
+elif a.endswith("ing"):
+    print(a+"ly")
+else:
+    print(a+"ing")
+
+Ans 22:
+a=input("Enter String: ")
+if len(a)%4==0:
+    print(a[::-1])
+else:
+    print(a)
+    
+Ans 23:
+a=input("Enter String: ")
+if len(a)<2:
+    print(" ")
+else:
+    print(a[:2]+a[-2:])
+
+Ans 24:
+a=input("Enter String: ")
+b=input("Enter String: ")
+m= len(a)//2
+print(a[ :m]+ b +a[m: ])
+    
+Ans 25:
+A list is a data structure in Python that is used to store multiple items in a single variable. Lists are ordered, mutable (i.e., you can change their content), and can contain elements of different data types (e.g., integers, strings, or even other lists).
+How to Reverse a List:
+There are several ways to reverse a list in Python:
+
+1. Using the reverse() Method:
+The reverse() method reverses the elements of the list in place (i.e., it modifies the original list).
+2. Using Slicing:
+You can reverse a list using slicing, which creates a new list that is the reverse of the original.
+3. Using the reversed() Function:
+The reversed() function returns an iterator that yields the elements of the list in reverse order. You can convert this iterator back into a list.
+
+Ans 26:
+1. pop() is the most common method and also allows you to capture the removed element.
+2. Slicing creates a new list without the last element.
+3. del removes the last element by directly deleting it from the list.
+
+Ans 27:
+l1=[2,33,222,14,25]
+print(l1[-1])
+Note: list1[-1] is 25
+
+Ans 28:
+1. append() when you want to add a single element to the list.
+2. extend() when you want to add multiple elements from an iterable to the list.
+
+Ans 29:
+l=[2,33,222,14,25]
+largest=max(l)
+smallest=min(l)
+total=sum(l)
+
+print("largest number: ",largest)
+print("smallest number: ",smallest)
+print("total numbers: ",total)
+
+Ans 30:
+1. == Operator: Checks if two lists are exactly identical.
+2. sorted() + ==: Checks if two lists have the same elements in any order.
+3. set() + ==: Checks if two lists have the same unique elements (ignoring duplicates).
+4. Element-wise comparison: Allows detailed, customized comparison between elements.
+5. Sublist check: Useful to determine if all elements of one list are contained within another.
+
+Ans 31:
+def count_matching_strings(strings):
+    count = 0
+    for s in strings:
+        if len(s) >= 2 and s[0] == s[-1]:
+            count += 1
+    return count
+# Example usage
+string_list = ["aba", "xyz", "aa", "ab", "b", "aab", "xyx"]
+
+# Get the count of matching strings
+matching_count = count_matching_strings(string_list)
+
+print("Number of matching strings:", matching_count)
+
+Ans 32:
+l=[1,2,3,4,5,3,4,5,6]
+a=list(set(l))
+print("original list",l)
+print("after removing duplicates: ",a)
+
+Ans 33:
+l=[1,2,3,4,5,3,4,5,6]
+l1=[]
+if len(l)==0:
+    print("list is empty")
+else:
+    print("list1 is empty")
+
+Ans 34:
+# Function to check if two lists have at least one common member
+def have_common_member_comprehension(list1, list2):
+    # Check if there is any intersection between the two lists
+    return any(item in list1 for item in list2)
+
+# Example usage
+list1 = [1, 2, 3, 4]
+list2 = [5, 6, 7, 8]
+list3 = [3, 5, 7, 9]
+
+# Check if list1 and list2 have any common members
+print("Do list1 and list2 have common members?", have_common_member_comprehension(list1, list2))
+
+# Check if list1 and list3 have any common members
+print("Do list1 and list3 have common members?", have_common_member_comprehension(list1, list3))
+
+Ans 35:
+# Generate a list of squares of numbers between 1 and 30
+squares = [x**2 for x in range(1, 31)]
+
+# Get the first 5 elements
+first_5 = squares[:5]
+
+# Get the last 5 elements
+last_5 = squares[-5:]
+
+# Print the results
+print("First 5 elements:", first_5)
+print("Last 5 elements:", last_5)
+
+Ans 36:
+def unique_elements(lst):
+    # Use a set to remove duplicates and then convert it back to a list
+    return list(set(lst))
+
+# Example usage:
+original_list = [1, 2, 2, 3, 4, 4, 5]
+unique_list = unique_elements(original_list)
+print("Original list:", original_list)
+print("Unique elements:", unique_list)
+
+Ans 37:
+def list_to_string(char_list):
+    # Join the list of characters into a single string
+    return ''.join(char_list)
+
+# Example usage:
+char_list = ['H', 'e', 'l', 'l', 'o']
+resulting_string = list_to_string(char_list)
+print("List of characters:", char_list)
+print("Resulting string:", resulting_string)
+
+Ans 38:
+import random
+l=[1,2,10,20,"tops","tech","python","true","false",100,200]
+print(random.choice(l))
+
+Ans 39:
+def second_smallest(lst):
+    # Remove duplicates by converting the list to a set and then back to a list
+    unique_lst = list(set(lst))
+    
+    # Check if there are at least two unique elements
+    if len(unique_lst) < 2:
+        return "List must contain at least two unique elements."
+    
+    # Sort the unique list
+    unique_lst.sort()
+    
+    # Return the second smallest element
+    return unique_lst[1]
+
+# Example usage:
+my_list = [4, 2, 7, 1, 9, 2, 4]
+result = second_smallest(my_list)
+print("List:", my_list)
+print("Second smallest number:", result)
+
+Ans 40:
+def get_unique_values(lst):
+    # Convert the list to a set to remove duplicates and then back to a list
+    unique_lst = list(set(lst))
+    return unique_lst
+
+# Example usage:
+my_list = [1, 2, 2, 3, 4, 4, 5, 5, 6]
+unique_values = get_unique_values(my_list)
+print("Original list:", my_list)
+print("Unique values:", unique_values)
+
+Ans 41:
+def contains_sublist(main_list, sublist):
+    # Convert the main list and sublist to string format for easier comparison
+    str_main = str(main_list)
+    str_sub = str(sublist)
+    
+    # Check if the string representation of the sublist is in the string representation of the main list
+    return str_sub in str_main
+
+# Example usage:
+main_list = [1, 2, 3, 4, 5, [6, 7]]
+sublist = [4, 5]
+
+# Note: This example checks sublists within the list. For more accurate sublist detection,
+# you might need more advanced techniques depending on the structure and requirements.
+print("Main list:", main_list)
+print("Sublist:", sublist)
+print("Contains sublist:", contains_sublist(main_list, sublist))
+
+Ans 42:
+def split_list(lst):
+    # Ensure the list has at least as many elements as variables
+    if len(lst) < 3:
+        raise ValueError("The list must have at least three elements to unpack into three variables.")
+    
+    # Unpack the list into different variables
+    var1, var2, var3 = lst[0], lst[1], lst[2]
+    return var1, var2, var3
+
+# Example usage:
+my_list = [10, 20, 30, 40, 50]
+var1, var2, var3 = split_list(my_list[:3])  # Pass only the first three elements for splitting
+
+print("Original list:", my_list)
+print("Variable 1:", var1)
+print("Variable 2:", var2)
+print("Variable 3:", var3)
+
+Ans 43:
+Definition: A tuple is an ordered collection of items. It is defined by placing the items within parentheses (), separated by commas.
+Mutability:
+
+1. Mutability:
+    List: Lists are mutable, meaning their elements can be changed or updated after the list is created.
+    Tuple: Tuples are immutable, meaning once created, their elements cannot be changed or updated.
+2. Syntax:
+    List: Lists are created using square brackets [].
+    Tuple: Tuples are created using parentheses ().
+3. Performance:
+    List: Due to their mutability, lists generally have a bit more overhead compared to tuples. They can be         slower for certain operations.
+    Tuple: Tuples, being immutable, are generally faster and have less memory overhead, making them more efficient in situations where a fixed-size, unchangeable sequence is needed.
+4. Use Cases:
+    List: Lists are more suitable when you need a collection of items that may change during the program's execution.
+    Tuple: Tuples are often used to represent fixed collections of items (e.g., coordinates, records) and can be used as dictionary keys due to their immutability.
+5. Methods:
+    List: Lists have various methods available, such as .append(), .extend(), .remove(), and .pop().
+    Tuple: Tuples have fewer methods available since they are immutable. The primary methods are .count() and .index().
+6. Syntax for Single Element:
+    List: To create a single-element list, you use a trailing comma inside the brackets.
+    Tuple: To create a single-element tuple, you must include a trailing comma inside the parentheses.
+
+Ans 44:
+my_tuple = (42, "Hello, World!", 3.14, True, [1, 2, 3])
+
+# Printing the tuple
+print("Tuple with different data types:", my_tuple)
+
+# Accessing each element in the tuple to show its type
+print("First element:", my_tuple[0], "Type:", type(my_tuple[0]))
+print("Second element:", my_tuple[1], "Type:", type(my_tuple[1]))
+print("Third element:", my_tuple[2], "Type:", type(my_tuple[2]))
+print("Fourth element:", my_tuple[3], "Type:", type(my_tuple[3]))
+print("Fifth element:", my_tuple[4], "Type:", type(my_tuple[4]))
+
+Ans 45:
+ist_of_tuples = [(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd')]
+
+# Unzipping the list of tuples into individual lists
+list1, list2 = zip(*list_of_tuples)
+
+# Converting the results to lists
+list1 = list(list1)
+list2 = list(list2)
+
+# Printing the individual lists
+print("List 1:", list1)
+print("List 2:", list2)
+
+Ans 46:
+list_of_tuples = [(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd')]
+
+# Converting the list of tuples into a dictionary
+dictionary = dict(list_of_tuples)
+
+# Printing the resulting dictionary
+print("Dictionary:", dictionary)
+
+Ans 47:
+1. Using dict() with a list of tuples is the most straightforward and commonly used method.
+2. Adding individual tuples directly to the dictionary is also possible but less common.
+3. Dictionary comprehension offers a more flexible way to create a dictionary from a list of tuples, especially if you need to manipulate the data during creation.
+
+Ans 48:
+my_dict = {'apple': 10, 'banana': 2, 'cherry': 5, 'date': 8}
+
+# Sorting the dictionary by value in ascending order
+sorted_dict_ascending = dict(sorted(my_dict.items(), key=lambda item: item[1]))
+
+# Sorting the dictionary by value in descending order
+sorted_dict_descending = dict(sorted(my_dict.items(), key=lambda item: item[1], reverse=True))
+
+# Printing the sorted dictionaries
+print("Dictionary sorted by value (ascending):", sorted_dict_ascending)
+print("Dictionary sorted by value (descending):", sorted_dict_descending)
+
+Ans 49:
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'c': 3, 'd': 4}
+dict3 = {'e': 5, 'f': 6}
+
+# Concatenate dictionaries using dictionary unpacking
+combined_dict = {**dict1, **dict2, **dict3}
+
+# Printing the resulting dictionary
+print("Combined dictionary:", combined_dict)
+
+Ans 50:
+my_dict = {'apple': 10, 'banana': 5, 'cherry': 7}
+
+# Function to check if a key exists in the dictionary
+def key_exists(dictionary, key):
+    return key in dictionary
+
+# Example usage
+key_to_check = 'banana'
+exists = key_exists(my_dict, key_to_check)
+
+if exists:
+    print(f"The key '{key_to_check}' exists in the dictionary.")
+else:
+    print(f"The key '{key_to_check}' does not exist in the dictionary.")
+
+Ans 51:
+1. Keys: Use for key in my_dict: to iterate over keys.
+2. Values: Use for value in my_dict.values(): to iterate over values.
+3. Key-Value Pairs: Use for key, value in my_dict.items(): to iterate over key-value pairs.
+4. Comprehensions: Use dictionary comprehensions to create new dictionaries or lists based on existing ones.
+5. Enumerate: Use enumerate() if you need index positions during iteration
+
+Ans 52:
+1. in Operator: Most common and efficient way to check for the presence of a key.
+2. .get() Method: Useful if you want to retrieve the value and check for key presence simultaneously.
+3. .keys() Method: Checks key presence by iterating over the dictionary’s keys.
+Each method has its use cases, but the in operator is generally preferred for its simplicity and readability.
+
+Ans 53:
+my_dict = {key: key**2 for key in range(1, 16)}
+
+# Printing the dictionary
+print("Dictionary with keys from 1 to 15:")
+print(my_dict)
+
+Ans 54:
+my_dict = {'apple': 10, 'banana': 5, 'cherry': 7}
+
+# List of keys to check
+keys_to_check = {'apple', 'banana', 'date'}
+
+# Convert dictionary keys to a set
+dict_keys = set(my_dict.keys())
+
+# Check if all keys in keys_to_check are present in the dictionary
+missing_keys = keys_to_check - dict_keys
+
+if not missing_keys:
+    print("All keys are present in the dictionary.")
+else:
+    print("Missing keys:", missing_keys)
+
+Ans 55:
+# Example dictionaries
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'c': 3, 'd': 4}
+
+# Merging dictionaries using unpacking
+merged_dict = {**dict1, **dict2}
+
+# Printing the merged dictionary
+print("Merged dictionary:", merged_dict)
+
+Ans 56:
+keys = ['a', 'b', 'd', 'c']
+values = [400, 400, 400, 300]
+
+# Mapping two lists into a dictionary
+mapped_dict = dict(zip(keys, values))
+
+# Printing the dictionary in the desired format
+print(f"Counter ({mapped_dict})")
+
+Ans 57:
+my_dict = {'a': 10, 'b': 45, 'c': 32, 'd': 78, 'e': 23, 'f': 56}
+
+# Find the top 3 highest values
+top_3_values = sorted(my_dict.values(), reverse=True)[:3]
+
+# Print the top 3 highest values
+print("The highest 3 values in the dictionary are:", top_3_values)
+
+Ans 58:
+from collections import defaultdict
+
+# Sample data
+data = [{'item': 'item1', 'amount': 400}, {'item': 'item2', 'amount': 300}, {'item': 'item1', 'amount': 750}]
+
+# Create a defaultdict to accumulate the amounts
+combined_dict = defaultdict(int)
+
+# Aggregate the amounts for each item
+for entry in data:
+    item = entry['item']
+    amount = entry['amount']
+    combined_dict[item] += amount
+
+# Convert defaultdict to a regular dictionary
+combined_dict = dict(combined_dict)
+
+# Print the result in the desired format
+print(f"Counter ({combined_dict})")
+
+Ans 59:
+from collections import defaultdict
+
+# Sample string
+input_string = "hello world"
+
+# Create a defaultdict to count occurrences of each letter
+letter_count = defaultdict(int)
+
+# Count each letter in the string
+for char in input_string:
+    if char.isalpha():  # Optionally count only alphabetic characters
+        letter_count[char] += 1
+
+# Convert defaultdict to a regular dictionary
+letter_count = dict(letter_count)
+
+# Print the result
+print("Letter count dictionary:", letter_count)
+
+Ans 60:
+from collections import Counter
+
+# Sample string
+input_string = 'w3resource'
+
+# Count occurrences of each character using Counter
+char_count = Counter(input_string)
+
+# Convert Counter to a regular dictionary (optional, as Counter is already a dictionary-like object)
+char_count_dict = dict(char_count)
+
+# Print the result
+print("Character count dictionary:", char_count_dict)
+
+Ans 61:
+def factorial_iterative(n):
+    """
+    Calculate the factorial of a non-negative integer n using an iterative approach.
+    
+    :param n: Non-negative integer
+    :return: Factorial of n
+    """
+    if n < 0:
+        raise ValueError("Input must be a non-negative integer.")
+    
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
+
+# Example usage
+print(factorial_iterative(5))  # Output: 120
+
+Ans 62:
+def is_in_range(number, lower_bound, upper_bound):
+    """
+    Check if a number is within the specified range (inclusive).
+    
+    :param number: The number to check
+    :param lower_bound: The lower bound of the range (inclusive)
+    :param upper_bound: The upper bound of the range (inclusive)
+    :return: True if the number is within the range, False otherwise
+    """
+    if lower_bound <= number <= upper_bound:
+        return True
+    else:
+        return False
+
+# Example usage
+print(is_in_range(5, 1, 10))  # Output: True
+print(is_in_range(15, 1, 10))  # Output: False
+
+Ans 63:
+def is_perfect_number(number):
+    """
+    Check whether a number is a perfect number.
+    
+    :param number: The number to check
+    :return: True if the number is a perfect number, False otherwise
+    """
+    if number < 1:
+        return False
+    
+    # Find the sum of proper divisors
+    sum_of_divisors = sum(i for i in range(1, number) if number % i == 0)
+    
+    return sum_of_divisors == number
+
+# Example usage
+print(is_perfect_number(6))   # Output: True
+print(is_perfect_number(28))  # Output: True
+print(is_perfect_number(12))  # Output: False
+
+Ans 64:
+def is_palindrome(s):
+    """
+    Check whether a given string is a palindrome.
+    
+    :param s: The string to check
+    :return: True if the string is a palindrome, False otherwise
+    """
+    # Normalize the string by converting it to lowercase and removing non-alphanumeric characters
+    normalized_str = ''.join(char.lower() for char in s if char.isalnum())
+    
+    # Check if the normalized string is equal to its reverse
+    return normalized_str == normalized_str[::-1]
+
+# Example usage
+print(is_palindrome("A man, a plan, a canal, Panama"))  # Output: True
+print(is_palindrome("Hello, World!"))                    # Output: False
+print(is_palindrome("racecar"))                          # Output: True
+
+Ans 65:
+1. Built-in Functions: Predefined functions available in Python.
+2. User-Defined Functions: Functions defined by the user using def.
+3. Lambda Functions: Anonymous functions defined using lambda.
+4. Recursive Functions: Functions that call themselves.
+5. Higher-Order Functions: Functions that take or return other functions.
+6. Generator Functions: Functions that use yield to produce an iterator.
+These types of functions provide flexibility and power in Python programming, enabling a wide range of functional programming techniques and design patterns.
+
+Ans 66:
+import random
+
+# Sample list
+my_list = [10, 20, 30, 40, 50]
+
+# Pick a random item from the list
+random_item = random.choice(my_list)
+
+print("Random item from list:", random_item)
+
+Ans 67:
+1. Using random.randrange()
+The random.randrange() function can be used to select a random number from a specified range. It works with integer ranges and allows you to specify the start, stop, and step.
+2. Using random.randint()
+The random.randint() function can also be used to pick a random integer from a specified range, inclusive of both endpoints.
+
+Ans 68:
+1. random.randint(a, b): Returns a random integer N such that a <= N <= b.
+2. random.randrange(start, stop): Returns a randomly selected element from the range [start, stop), where stop is exclusive.
+3. random.random(): Returns a random floating-point number between 0.0 and 1.0.
+4. random.uniform(a, b): Returns a random floating-point number N such that a <= N <= b.
+5. random.gauss(mu, sigma): Returns a random number from a Gaussian (normal) distribution with mean mu and standard deviation sigma.
+These functions allow you to generate random numbers based on your needs, whether you require integers, floating-point numbers, or numbers from a specific distribution.
+
+Ans 69:
+1. random.seed(a=None): Initializes the random number generator with a specific seed value. The seed value a can be any hashable object, typically an integer.
+2. Reproducibility: By setting the seed to the same value (42 in the example), the sequence of random numbers generated will be the same each time the code is executed. This is useful for debugging or for situations where you need repeatable results.
+
+Ans 70:
+1. import random: Imports the random module which provides various functions for generating random numbers and performing random operations.
+2. random.shuffle(list): Randomly shuffles the items of the list list in place. This means that the original list is modified and no new list is created.
+
+Ans 71:
+1. open(filename, mode): Opens a file with the specified mode ('r', 'w', 'a', etc.).
+2. write(): Writes a string to the file.
+3. writelines(): Writes a list of strings to the file.
+4. read(): Reads the entire file content.
+5. readline(): Reads a single line from the file.
+6. readlines(): Reads all lines into a list.
+7. close(): Closes the file.
+with statement: Simplifies file handling by automatically managing file open/close operations.
+These functions and methods help manage file operations effectively in Python.
+
+Ans 72:
+file_name = 'example.txt'
+
+try:
+    # Open the file in read mode
+    with open(file_name, 'r') as file:
+        # Read the entire content of the file
+        content = file.read()
+        
+    # Print the content of the file
+    print("File content:")
+    print(content)
+except FileNotFoundError:
+    print(f"The file {file_name} does not exist.")
+except IOError:
+    print("An error occurred while reading the file.")
+
+Ans 73:
+file_name = 'example.txt'
+
+# Text to append
+text_to_append = "This is an additional line of text.\n"
+
+# Append text to the file
+with open(file_name, 'a') as file:
+    file.write(text_to_append)
+
+# Read and display the updated content of the file
+try:
+    with open(file_name, 'r') as file:
+        content = file.read()
+    
+    print("Updated file content:")
+    print(content)
+except FileNotFoundError:
+    print(f"The file {file_name} does not exist.")
+except IOError:
+    print("An error occurred while reading the file.")
+
+Ans 74:
+def read_first_n_lines(file_name, n):
+    """
+    Read and print the first n lines of a file.
+
+    :param file_name: Name of the file to read
+    :param n: Number of lines to read
+    """
+    try:
+        with open(file_name, 'r') as file:
+            for i in range(n):
+                line = file.readline()
+                if not line:  # Stop if end of file is reached
+                    break
+                print(line, end='')  # Print without adding extra newline
+    except FileNotFoundError:
+        print(f"The file {file_name} does not exist.")
+    except IOError:
+        print("An error occurred while reading the file.")
+
+# Define the file name and the number of lines to read
+file_name = 'example.txt'
+n = 5  # Number of lines to read
+
+# Call the function to read and print the first n lines
+read_first_n_lines(file_name, n)
+
+Ans 75:
+def read_last_n_lines(file_name, n):
+    """
+    Read and print the last n lines of a file.
+
+    :param file_name: Name of the file to read
+    :param n: Number of lines to read from the end
+    """
+    try:
+        with open(file_name, 'r') as file:
+            # Read all lines into a list
+            lines = file.readlines()
+            
+            # Get the last n lines
+            last_n_lines = lines[-n:] if n <= len(lines) else lines
+            
+            # Print the last n lines
+            for line in last_n_lines:
+                print(line, end='')  # Print without adding extra newline
+    except FileNotFoundError:
+        print(f"The file {file_name} does not exist.")
+    except IOError:
+        print("An error occurred while reading the file.")
+
+# Define the file name and the number of lines to read
+file_name = 'example.txt'
+n = 5  # Number of lines to read from the end
+
+# Call the function to read and print the last n lines
+read_last_n_lines(file_name, n)
+
+Ans 76:
+def read_file_to_list(file_name):
+    """
+    Read a file line by line and store each line into a list.
+
+    :param file_name: Name of the file to read
+    :return: List containing all lines of the file
+    """
+    lines_list = []
+    try:
+        with open(file_name, 'r') as file:
+            # Read each line and append to the list
+            for line in file:
+                lines_list.append(line.rstrip('\n'))  # Remove the newline character
+    except FileNotFoundError:
+        print(f"The file {file_name} does not exist.")
+    except IOError:
+        print("An error occurred while reading the file.")
+    
+    return lines_list
+
+# Define the file name
+file_name = 'example.txt'
+
+# Call the function to read the file and get the lines as a list
+lines = read_file_to_list(file_name)
+
+# Print the lines
+print("Lines in the file:")
+for line in lines:
+    print(line)
+
+Ans 77:
+def read_file_to_variable(file_name):
+    """
+    Read a file line by line and store its contents into a single variable.
+
+    :param file_name: Name of the file to read
+    :return: String containing all lines of the file concatenated
+    """
+    try:
+        with open(file_name, 'r') as file:
+            # Read all lines and join them into a single string
+            content = ''.join(line for line in file)
+    except FileNotFoundError:
+        print(f"The file {file_name} does not exist.")
+        content = None
+    except IOError:
+        print("An error occurred while reading the file.")
+        content = None
+    
+    return content
+
+# Define the file name
+file_name = 'example.txt'
+
+# Call the function to read the file and get the content as a variable
+file_content = read_file_to_variable(file_name)
+
+# Print the content if it was successfully read
+if file_content is not None:
+    print("File content:")
+    print(file_content)
+
+Ans 78:
+def find_longest_words(file_name):
+    """
+    Find and return the longest word(s) in a file.
+
+    :param file_name: Name of the file to read
+    :return: List of longest word(s)
+    """
+    try:
+        with open(file_name, 'r') as file:
+            # Read the entire file content
+            content = file.read()
+
+            # Split content into words (using whitespace as delimiter)
+            words = content.split()
+
+            # Find the length of the longest word(s)
+            max_length = max(len(word) for word in words) if words else 0
+
+            # Find all words that have the maximum length
+            longest_words = [word for word in words if len(word) == max_length]
+
+    except FileNotFoundError:
+        print(f"The file {file_name} does not exist.")
+        longest_words = []
+    except IOError:
+        print("An error occurred while reading the file.")
+        longest_words = []
+
+    return longest_words
+
+# Define the file name
+file_name = 'example.txt'
+
+# Call the function to find the longest word(s)
+longest_words = find_longest_words(file_name)
+
+# Print the longest words
+print("Longest word(s):")
+for word in longest_words:
+    print(word)
+
+Ans 79:
+def count_lines_in_file(file_name):
+    """
+    Count the number of lines in a file.
+
+    :param file_name: Name of the file to count lines
+    :return: Number of lines in the file
+    """
+    try:
+        with open(file_name, 'r') as file:
+            # Initialize line count
+            line_count = 0
+            
+            # Iterate over each line in the file
+            for line in file:
+                line_count += 1
+                
+    except FileNotFoundError:
+        print(f"The file {file_name} does not exist.")
+        line_count = 0
+    except IOError:
+        print("An error occurred while reading the file.")
+        line_count = 0
+    
+    return line_count
+
+# Define the file name
+file_name = 'example.txt'
+
+# Call the function to count the number of lines
+number_of_lines = count_lines_in_file(file_name)
+
+# Print the number of lines
+print(f"Number of lines in the file: {number_of_lines}")
+
+Ans 80:
+from collections import Counter
+import re
+
+def count_word_frequency(file_name):
+    """
+    Count the frequency of each word in a file.
+
+    :param file_name: Name of the file to analyze
+    :return: Dictionary with words as keys and their frequencies as values
+    """
+    try:
+        with open(file_name, 'r') as file:
+            # Read the entire file content
+            content = file.read()
+            
+            # Convert to lowercase to make the count case-insensitive
+            content = content.lower()
+            
+            # Use regular expressions to find words, ignoring punctuation
+            words = re.findall(r'\b\w+\b', content)
+            
+            # Count the frequency of each word
+            word_counts = Counter(words)
+            
+    except FileNotFoundError:
+        print(f"The file {file_name} does not exist.")
+        word_counts = {}
+    except IOError:
+        print("An error occurred while reading the file.")
+        word_counts = {}
+    
+    return word_counts
+
+# Define the file name
+file_name = 'example.txt'
+
+# Call the function to get word frequencies
+word_frequencies = count_word_frequency(file_name)
+
+# Print the word frequencies
+print("Word frequencies:")
+for word, count in word_frequencies.items():
+    print(f"{word}: {count}")
+
+Ans 81:
+def write_list_to_file(file_name, data_list):
+    """
+    Write the elements of a list to a file.
+
+    :param file_name: Name of the file to write to
+    :param data_list: List of data to write to the file
+    """
+    try:
+        with open(file_name, 'w') as file:
+            # Write each element of the list to the file
+            for item in data_list:
+                file.write(f"{item}\n")
+        print(f"Data has been written to {file_name}.")
+    except IOError:
+        print("An error occurred while writing to the file.")
+
+# Define the file name and the list to write
+file_name = 'output.txt'
+data_list = ['apple', 'banana', 'cherry', 'date', 'elderberry']
+
+# Call the function to write the list to the file
+write_list_to_file(file_name, data_list)
+
+Ans 82:
+def copy_file_contents(source_file, destination_file):
+    """
+    Copy the contents of one file to another.
+
+    :param source_file: Name of the source file to read from
+    :param destination_file: Name of the destination file to write to
+    """
+    try:
+        # Open the source file in read mode
+        with open(source_file, 'r') as src:
+            # Open the destination file in write mode
+            with open(destination_file, 'w') as dst:
+                # Read the content of the source file and write to the destination file
+                content = src.read()
+                dst.write(content)
+        print(f"Contents copied from {source_file} to {destination_file}.")
+    except FileNotFoundError:
+        print(f"The file {source_file} does not exist.")
+    except IOError:
+        print("An error occurred while copying the file.")
+
+# Define the source and destination file names
+source_file = 'source.txt'
+destination_file = 'destination.txt'
+
+# Call the function to copy contents
+copy_file_contents(source_file, destination_file)
+
+Ans 83:
+Exception Handling in Python
+Exception handling is a mechanism in Python that allows you to manage and respond to runtime errors or exceptional conditions that arise during the execution of a program. It provides a way to gracefully handle errors without terminating the program abruptly.
+
+Key Concepts
+1. Exception:
+
+An exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions. Examples include division by zero, file not found, or invalid user input.
+2. Error:
+
+An error is a specific type of exception that usually indicates a serious issue that the program cannot recover from, such as syntax errors or runtime errors.
+3. Try and Except Blocks:
+
+ try block: Contains code that might raise an exception.
+ except block: Contains code that executes if an exception occurs in the try block.
+4. Finally Block:
+
+ finally block: Contains code that always executes, regardless of whether an exception occurred or not. It is typically used for cleanup actions, such as closing files or releasing resources.
+5. Else Block:
+
+else block: Contains code that executes if no exceptions occur in the try block. It is optional and used for code that should run when no exceptions are raised.
+6. Raising Exceptions:
+
+You can manually raise exceptions using the raise statement to indicate that an error condition has occurred.
+
+Ans 84:
+Built-in Exception Classes
+Python has several built-in exception classes that you can use to handle different types of errors. Some of the most common ones include:
+
+1. Exception: The base class for all built-in exceptions.
+2. ArithmeticError: Base class for arithmetic-related errors.
+3. ZeroDivisionError: Raised when dividing by zero.
+4. OverflowError: Raised when an operation exceeds the limits of a numeric type.
+5. FloatingPointError: Raised when a floating-point operation fails.
+6. AttributeError: Raised when an invalid attribute reference is made.
+7. IndexError: Raised when an index is out of range for a sequence.
+8. KeyError: Raised when a dictionary key is not found.
+9. FileNotFoundError: Raised when a file or directory is requested but cannot be found.
+10. IOError: Raised when an I/O operation (such as reading or writing a file) fails.
+11. ValueError: Raised when a function receives an argument of the right type but inappropriate value.
+12. TypeError: Raised when an operation or function is applied to an object of inappropriate type.
+13. NameError: Raised when a local or global name is not found.
+14. RuntimeError: Raised for errors that do not fall into other categories.
+15. NotImplementedError: Raised when an abstract method or function is not implemented.
+16. SyntaxError: Raised when there is a syntax error in the code.
+17. IndentationError: A subclass of SyntaxError raised when there is incorrect indentation.
+18. EOFError: Raised when the end of a file is reached unexpectedly.
+These built-in exceptions cover a wide range of error conditions and can be used to handle errors more effectively in your programs.
+
+Ans 85:
+1. The else block runs only if no exceptions are raised in the try block.
+2. It is useful for placing code that should execute only if the try block is successful, ensuring that it does not run if an exception occurs.
+
+Ans 86:
+1. Single except Block: You can catch multiple exceptions with a single except block by specifying them in a tuple.
+2. Handling Multiple Exceptions: This approach allows you to handle various exceptions in a unified manner, which can be useful if the handling logic for the exceptions is the same or similar.
+This feature is particularly useful for simplifying code and avoiding redundant except blocks for exceptions that should be handled similarly.
+
+Ans 87:
+1. The finally block ensures that certain code is executed regardless of whether an exception occurs or not.
+2. It is useful for performing clean-up actions such as closing files, releasing locks, or freeing up resources that were acquired in the try block.
+3. Even if an exception is raised and not caught, the finally block is still executed before the exception is propagated further.
+
+Ans 88:
+1. '1' == 1: Evaluates to False because Python does not consider a string and an integer to be equal.
+2. Type Comparison: In Python, equality comparisons between different types (such as string and integer) typically result in False.
+
+Ans 89:
+1. try Block: Contains code that might raise an exception.
+2. except Block: Catches and handles exceptions.
+3. finally Block: Executes regardless of whether an exception occurred, ideal for cleanup tasks.
+This structure allows you to manage exceptions gracefully, ensuring necessary cleanup and resource management even if errors occur during execution.
+
+Ans 90:
+def get_odd_number():
+    while True:
+        try:
+            # Prompt the user for input
+            user_input = input("Please enter an odd number: ")
+            
+            # Convert the input to an integer
+            number = int(user_input)
+            
+            # Check if the number is even
+            if number % 2 == 0:
+                raise EvenNumberError("The number entered is even, not odd.")
+            
+            # If number is odd, break out of the loop
+            print(f"You entered the odd number: {number}")
+            break
+        
+        except ValueError:
+            # Handle the case where input is not an integer
+            print("Invalid input. Please enter a valid integer.")
+        
+        except EvenNumberError as e:
+            # Handle the case where an even number is entered
+            print(e)
+
+# Run the program
+get_odd_number()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+ 
+
